@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:todo/widgets/button_widget.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,14 +25,14 @@ class _HomePageState extends State<HomePage> {
             children: [
               RichText(
                   text: const TextSpan(
-                      text: "Hey There!",
+                      text: "Welcome!",
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 45,
                           fontWeight: FontWeight.bold),
                       children: [
                     TextSpan(
-                        text: "\n       Have a productive day!",
+                        text: "\n       Start organising to be productive!",
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 14,
@@ -43,15 +43,13 @@ class _HomePageState extends State<HomePage> {
               ),
               const ButtonWidget(
                   bgcolor: Colors.black,
-                  text: "Add Task",
+                  text: "Register",
                   textColor: Colors.white),
               const SizedBox(
                 height: 20,
               ),
               const ButtonWidget(
-                  bgcolor: Colors.black,
-                  text: "View Tasks",
-                  textColor: Colors.white)
+                  bgcolor: Colors.black, text: "Login", textColor: Colors.white)
             ]),
         decoration: const BoxDecoration(
             image: DecorationImage(
