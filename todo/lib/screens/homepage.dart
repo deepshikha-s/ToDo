@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
               ),
               const ButtonWidget(
                   bgcolor: Colors.black,
-                  text: "Add Task",
+                  text: "Create Task",
                   textColor: Colors.white),
               const SizedBox(
                 height: 20,
