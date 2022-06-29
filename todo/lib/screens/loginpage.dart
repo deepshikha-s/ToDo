@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:todo/screens/homepage.dart';
 import 'package:todo/widgets/button_widget.dart';
 
 class LoginPage extends StatefulWidget {
@@ -48,8 +50,17 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 20,
               ),
-              const ButtonWidget(
-                  bgcolor: Colors.black, text: "Login", textColor: Colors.white)
+              InkWell(
+                onTap: () {
+                  Get.to(() => const HomePage(),
+                      transition: Transition.fade,
+                      duration: const Duration(seconds: 1));
+                },
+                child: const ButtonWidget(
+                    bgcolor: Colors.black,
+                    text: "Login",
+                    textColor: Colors.white),
+              )
             ]),
         decoration: const BoxDecoration(
             image: DecorationImage(

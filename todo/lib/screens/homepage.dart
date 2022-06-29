@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:todo/screens/addtask.dart';
+import 'package:todo/screens/displaytask.dart';
 import 'package:todo/widgets/button_widget.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -41,17 +44,31 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: MediaQuery.of(context).size.height / 3,
               ),
-              const ButtonWidget(
-                  bgcolor: Colors.black,
-                  text: "Create Task",
-                  textColor: Colors.white),
+              InkWell(
+                onTap: () {
+                  Get.to(() => const AddTask(),
+                      transition: Transition.fade,
+                      duration: const Duration(milliseconds: 25));
+                },
+                child: const ButtonWidget(
+                    bgcolor: Colors.black,
+                    text: "Create Task",
+                    textColor: Colors.white),
+              ),
               const SizedBox(
                 height: 20,
               ),
-              const ButtonWidget(
-                  bgcolor: Colors.black,
-                  text: "View Tasks",
-                  textColor: Colors.white)
+              InkWell(
+                onTap: () {
+                  Get.to(() => const DisplayTasks(),
+                      transition: Transition.fade,
+                      duration: const Duration(milliseconds: 25));
+                },
+                child: const ButtonWidget(
+                    bgcolor: Colors.black,
+                    text: "View Tasks",
+                    textColor: Colors.white),
+              )
             ]),
         decoration: const BoxDecoration(
             image: DecorationImage(

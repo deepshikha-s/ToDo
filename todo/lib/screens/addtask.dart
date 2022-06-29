@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:todo/widgets/textfield_widget.dart';
 
 import '../widgets/button_widget.dart';
@@ -29,7 +30,9 @@ class AddTask extends StatelessWidget {
                   height: 50,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.back();
+                  },
                   icon: const Icon(Icons.arrow_back_ios),
                   color: Colors.blue,
                 )
