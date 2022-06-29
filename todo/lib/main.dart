@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo/screens/addtask.dart';
+import 'package:todo/screens/displaytask.dart';
 import 'package:todo/screens/homepage.dart';
 import 'package:todo/screens/loginpage.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const DisplayTasks(),
     );
   }
 }
